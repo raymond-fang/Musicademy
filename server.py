@@ -8,7 +8,7 @@ app = Flask(__name__)
 # ROUTES
 @app.route('/')
 def start_page():
-   return render_template('home.html')   
+   return render_template('welcome.html')   
 
 
 @app.route('/quiz/<page>')
@@ -29,8 +29,35 @@ quizData = {
         "id":  "1", 
         "question": "Tech-House is the combination between which of these two genres?",
         "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
-        "answer": "3"
+        "answer": "2"
+    },
+
+    "2" : {
+        "id":  "2", 
+        "question": "*Filler Question* ",
+        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
+        "answer": "2"
+    },
+    "3" : {
+        "id":  "3", 
+        "question": "*Filler Question* ",
+        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
+        "answer": "2"
+    },
+    "4" : {
+        "id":  "4", 
+        "question": "*Filler Question* ",
+        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
+        "answer": "2"
+    },
+      "5" : {
+        "id":  "5", 
+        "question": "*Filler Question* ",
+        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
+        "answer": "2"
     }
+
+
 }
 
 
