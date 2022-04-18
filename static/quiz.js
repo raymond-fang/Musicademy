@@ -1,5 +1,6 @@
 //max # of questions in quiz
-var maxQuestions= 6;
+var maxQuestions= 7;
+var score = 0;
 
 function loadChoices() {
     $("#question-wrapper").append($('<p> ' + quizData.id + ") " + quizData.question + '</p>'));
@@ -46,12 +47,16 @@ $(document).ready(function(){
         if (choice == quizData.answer){
             // add success msg if correct
             $(this).addClass("bg-success")
+            score++;
             $("<span id='inline-msg' class='text-success'>Correct Answer! </span>").insertAfter("#question-wrapper")
         
         } else {
             // add err msg if incorrect
             $(this).addClass("bg-danger")
-            $("<span  id='inline-msg' class='text-danger'>Incorrect Answer </span>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='text-danger'>Incorrect Answer </span>").insertAfter("#question-wrapper")
+        }
+        if (quizData.id == maxQuestions){
+            $("<span id='inline-msg'>Final Score: " + score + "/7 </span> <br>").insertAfter("#question-wrapper")
         }
         // disable buttons after answer chosen
         $('.multChoice').each(function(i, obj) {

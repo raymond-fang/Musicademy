@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<script>
+	var data = {{data|tojson}};
+</script>
+<script src="../static/learn.js"></script> 
+
+<style>
+    .right-align {
+		float: right;
+	}
+
+</style>
+    
+<div class="row">
+    <div class="col-md-12 title">
+        <h1>{{data.topic}}</h1>
+    </div>
+
+    <div class="col-md-12">
+        {{data.summary}}
+    </div>
+    <div id="audio-wrapper" class="col-md-12">
+        <br><br>
+        Listen to {{data.name}}:
+    </div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+        <a class="btn btn-primary" type="button" href="/learn/1">See previous</a>
+    </div>
+
+	<div class="col-md-6">
+        <a class="btn btn-primary right-align" type="button" href="/learn/2">See next</a>
+
+    </div>
+</div>
+
+
+
+{% endblock content %}
