@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+    let quizData= {{quizData|tojson}}
+</script>
+<script src="../static/quiz.js"></script> 
+
+
+<div id="question-wrapper" class="h2">
+
+</div>
+
+<div id="choices-wrapper">
+
+</div>
+<div class="d-flex justify-content-between" id="buttons-wrapper"> 
+</div>
+{% endblock %}

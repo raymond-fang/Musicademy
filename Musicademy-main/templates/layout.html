@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+
+  <!-- jquery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+  <title> Musicacademy </title>
+  
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <div class="col-5">
+        <div class="row">
+          <img src="https://apprecs.org/gp/images/app-icons/300/45/modern.audio.tools.musicequalizer.jpg" class="title-logo">
+          <a class="navbar-brand" style="padding-top: 20px; padding-left: 20px;" href="/"> Musicacademy </a>
+        </div> 
+      </div> 
+      <div class="col-4"></div>
+      <div class="col-3">
+        <input type="submit" value="Sign Up" class="title-btn">
+        <input type="submit" value="Login" class="title-btn">
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup"></div>
+    </div>
+  </nav>
+  
+  <div class="container">     
+    {% block content %}
+
+    {% endblock %}
+  </div>
+
+  </body>
+</html>
+
