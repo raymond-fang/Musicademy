@@ -4,6 +4,7 @@ from flask import Response, request, jsonify
 app = Flask(__name__)
 
 
+
 # ROUTES
 @app.route('/')
 def start_page():
@@ -11,17 +12,26 @@ def start_page():
 
 
 @app.route('/quiz/<page>')
-def hello_name(page=None):
-    return render_template('quiz.html') 
+def load_quiz(page=None):
+    return render_template('quiz.html', quizData= quizData[page]) 
 
 @app.route('/learn/<page>')
-def hello_name(page=0):
+def learn(page=0):
     return render_template('learn.html') 
 
 
 
 
 # AJAX FUNCTIONS
+
+quizData = {
+    "1" : {
+        "id":  "1", 
+        "question": "Tech-House is the combination between which of these two genres?",
+        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
+        "answer": "3"
+    }
+}
 
 
 
