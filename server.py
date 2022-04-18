@@ -51,27 +51,27 @@ quizData = {
 
     "2" : {
         "id":  "2", 
-        "question": "*Filler Question* ",
-        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
-        "answer": "2"
+        "question": "Which of the following genres tends to use acoustic guitars?",
+        "choices": ["Techno", "Pop", "House", "Country"],
+        "answer": "3"
     },
     "3" : {
         "id":  "3", 
-        "question": "*Filler Question* ",
-        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
-        "answer": "2"
+        "question": "Which of the following genres is known for its heavy reliance on a 4/4 rhythm?",
+        "choices": ["Techno", "Pop", "House", "Country"],
+        "answer": "0"
     },
     "4" : {
         "id":  "4", 
-        "question": "*Filler Question* ",
-        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
-        "answer": "2"
+        "question": "Which of the following genres makes up the majority of mainstream music consumption?",
+        "choices": ["Techno", "Pop", "House", "Country"],
+        "answer": "1"
     },
       "5" : {
         "id":  "5", 
-        "question": "*Filler Question* ",
-        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
-        "answer": "2"
+        "question": "Which of the following pairs contains the most similar genres?",
+        "choices": ["Techno and House", "Pop and Techno", "House and Country", "Country and Techno"],
+        "answer": "0"
     },
     "6" : {
         "id":  "6", 
