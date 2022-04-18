@@ -4,6 +4,7 @@ from flask import Response, request, jsonify
 app = Flask(__name__)
 
 
+score = 0
 
 # ROUTES
 @app.route('/')
@@ -13,11 +14,20 @@ def start_page():
 
 @app.route('/quiz/<page>')
 def load_quiz(page=None):
-    return render_template('quiz.html', quizData= quizData[page]) 
+    return render_template('quiz.html', quizData= quizData[page], score=score) 
 
 @app.route('/learn/<page>')
 def learn(page=None):
-    return render_template('learn.html', data = learnData[page]) 
+    return render_template('learn.html', data = learnData[page])
+
+@app.route('/updateScore', methods=['POST'])
+def add():
+    global score
+    data = request.get_json()
+    print(data)
+    score += data["result"]
+    print(score)
+    return jsonify(url="quiz/1")
 
 
 

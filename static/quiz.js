@@ -1,6 +1,5 @@
 //max # of questions in quiz
 var maxQuestions= 7;
-var score = 0;
 
 function loadChoices() {
     $("#question-wrapper").append($('<p> ' + quizData.id + ") " + quizData.question + '</p>'));
@@ -46,13 +45,32 @@ $(document).ready(function(){
 
         if (choice == quizData.answer){
             // add success msg if correct
-            $(this).addClass("bg-success")
-            score++;
+            $(this).addClass("bg-success");
+            var item = {"result" : 1};
+            $.ajax({
+                type: "POST",
+                url: "/updateScore",
+                dataType : "json",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(item),
+                success: function (response) {
+                }
+            });
             $("<span id='inline-msg' class='text-success'>Correct Answer! </span>").insertAfter("#question-wrapper")
         
         } else {
             // add err msg if incorrect
             $(this).addClass("bg-danger")
+            var item = {"result" : 0};
+            $.ajax({
+                type: "POST",
+                url: "/updateScore",
+                dataType : "json",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(item),
+                success: function (response) {
+                }
+            });
             $("<span id='inline-msg' class='text-danger'>Incorrect Answer </span>").insertAfter("#question-wrapper")
         }
         if (quizData.id == maxQuestions){
