@@ -47,6 +47,7 @@ $(document).ready(function(){
             // add success msg if correct
             $(this).addClass("bg-success");
             var item = {"result" : 1};
+            score++;
             $.ajax({
                 type: "POST",
                 url: "/updateScore",
