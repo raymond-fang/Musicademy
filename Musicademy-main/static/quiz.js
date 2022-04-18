@@ -1,5 +1,5 @@
 //max # of questions in quiz
-var maxQuestions= 6;
+var maxQuestions= 7;
 
 function loadChoices() {
     $("#question-wrapper").append($('<p> ' + quizData.id + ") " + quizData.question + '</p>'));
