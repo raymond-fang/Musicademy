@@ -105,48 +105,73 @@ learnData = {
 quizData = {
     "1" : {
         "id":  "1", 
-        "question": "Tech-House is the combination between which of these two genres?",
-        "choices": ["Techno and Progressive Techno", "House and Pop", "Techno and House", "Country and House"],
+        "question": "What genre of music combines the influence of vintage or modern swing and jazz mixed with house and hiphop?",
+        "choices": ["Electronic Rock","Lofi", "Electro Swing", "Dubstep" ],
         "answer": "2"
     },
 
     "2" : {
         "id":  "2", 
-        "question": "Which of the following genres tends to use acoustic guitars?",
-        "choices": ["Techno", "Pop", "House", "Country"],
-        "answer": "3"
+        "question": " What music style is generally characterized by sparse, syncopated rhythmic patterns with prominent sub-bass frequencies.",
+        "choices": ["House", "Dubstep", "Electronic Rock", "Lofi"], 
+        "answer": "1"
     },
     "3" : {
         "id":  "3", 
-        "question": "Which of the following genres is known for its heavy reliance on a 4/4 rhythm?",
-        "choices": ["Techno", "Pop", "House", "Country"],
-        "answer": "0"
+        "question": "Which Genre is a form of downtempo that combines elements of Hiphop and chill out music?",
+        "choices": ["House","Electronic Rock", "Dubstep",  "Lofi"], 
+        "answer": "3"
     },
     "4" : {
         "id":  "4", 
-        "question": "Which of the following genres makes up the majority of mainstream music consumption?",
-        "choices": ["Techno", "Pop", "House", "Country"],
+        "question": "What Genre was created by DJs and music producers from Chicago's underground club culture in the 1980s, as DJs from the subculture began altering disco songs to give them a more mechanical beat and deeper basslines.",
+        "choices": [ "Dubstep", "House", "Industrial", "Lofi"], 
         "answer": "1"
     },
-      "5" : {
+    "5" : {
         "id":  "5", 
-        "question": "Which of the following pairs contains the most similar genres?",
-        "choices": ["Techno and House", "Pop and Techno", "House and Country", "Country and Techno"],
-        "answer": "0"
+        "question": "What Genre spawned the dark electro genre, pioneered by ​​ Skinny Puppy, Front Line Assembly, Numb, and others.",
+        "choices": [ "Dubstep", "House", "Industrial", "Lofi"], 
+        "answer": "2"
     },
     "6" : {
         "id":  "6", 
         "question": " Listen to this Song. What genre is it?",
-        "choices": ["Progressive Techno", "Deep House", "Techno House", "Minimal"],
+        "choices": [ "Dubstep", "House", "Industrial", "Lofi"], 
         "answer": "2",
-        "embedAudio" : '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259022901&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/livealok" title="Alok" target="_blank" style="color: #cccccc; text-decoration: none;">Alok</a> · <a href="https://soundcloud.com/livealok/alok-liu-bolum-back" title="ALOK &amp; LIU - BOLUMBACK [ FREE DOWNLOAD ]" target="_blank" style="color: #cccccc; text-decoration: none;">ALOK &amp; LIU - BOLUMBACK [ FREE DOWNLOAD ]</a></div>'
+        "embedAudio" : '<iframe class="right-align" style="border-radius:12px" src="https://open.spotify.com/embed/track/1nZMBGnMGqEsiiw7EVQdjS?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     },
-      "7" : {
+
+    "7" : {
         "id":  "7", 
         "question": " Listen to this Song. What genre is it?",
-        "choices": ["Progressive Techno", "House", "Techno House", "Minimal"],
+        "choices": ["House", "Dubstep", "Electronic Rock", "Lofi"], 
+        "answer": "3",
+        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6O5GkApphr8bRlbA8oehvj?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+      },
+    
+    "8" : {
+        "id":  "8", 
+        "question": "True or False: This Song is an example of Electro Swing",
+        "choices": ["True", "False"],
         "answer": "0",
-        "embedAudio" : '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/629240799&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/joris-voorn" title="Joris Voorn" target="_blank" style="color: #cccccc; text-decoration: none;">Joris Voorn</a> · <a href="https://soundcloud.com/joris-voorn/antigone-2" title="Antigone" target="_blank" style="color: #cccccc; text-decoration: none;">Antigone</a></div>'
+        "embedAudio" : '<iframe class="right-align" style="border-radius:12px" src="https://open.spotify.com/embed/track/04KsMCb9PZE2S0AtUU8Jhb?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+      },
+
+    "9" : {
+        "id":  "9", 
+        "question": " True or False: This song is an example of Dubstep",
+        "choices": ["True", "False"],
+        "answer": "1",
+        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0bsdfTgzxOPN4RcZcGJJ3t?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+      },
+    "10" : {
+        "id":  "10", 
+        "question": " Listen to this Song. What genre is it?",
+        "choices": ["Trance", "Lofi", "House", "Electro-rock"],
+        "answer": "0",
+        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4nM12eRb7k6pylJGGivAQp?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+
       }
 }
 
