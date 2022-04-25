@@ -35,8 +35,8 @@ body {
     border-color: rgb(255, 255, 255);
 }
 .sub-header {
-    padding-top: 30px;
-    padding-left: 300px;
+    padding-top: 40px;
+    padding-left: 375px;
     margin-bottom: 0px;
 }
 .header-links {
@@ -49,7 +49,7 @@ body {
     background-color: rgba(7, 77, 163, 0.801);
 }
 .background {
-    background-color: rgba(148, 225, 242, 0.845);
+    background-color: rgba(13, 139, 198);
 }
 .navbar-brand {
     color: white !important;
