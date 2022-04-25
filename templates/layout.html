@@ -13,20 +13,46 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+  <title> Musicademy </title>
 
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-          <a href="/">Home</a>
-          <a href="/learn/1">Learn</a>
-          <a href="/quiz/1">Quiz</a>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-6">
+              <img src="https://apprecs.org/gp/images/app-icons/300/45/modern.audio.tools.musicequalizer.jpg" class="title-logo">
+              <a class="navbar-brand" style="padding-top: 20px; padding-left: 20px;" href="/"> Musicademy </a>
+            </div>
+            
+            <div class="col-6 header-links">
+              <a class="navbar-brand col-2" href="/">Home</a>
+              <a class="navbar-brand col-2" href="/learn/1">Learn</a>
+              <a class="navbar-brand col-2" href="/quiz/1">Quiz</a>
+            </div>
+          </div>
+        </div> 
+        
+        <div class="col-3">
+          <input type="submit" value="Sign Up" class="btn title-btn">
+          <input type="submit" value="Login" class="btn title-btn">
+        </div>
+      </div> 
       </div>
-  </nav>
+    </nav>
     
-  <div class="container">     
-    {% block content %}
-    {% endblock %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2 background"></div>
+      <div class="col-8">
+        {% block content %}
+        {% endblock %}
+      </div> 
+      <div class="col-2 background"></div>     
+    </div>
   </div>
 
   </body>
