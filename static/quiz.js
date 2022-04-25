@@ -75,7 +75,7 @@ $(document).ready(function(){
             $("<span id='inline-msg' class='text-danger'>Incorrect Answer </span>").insertAfter("#question-wrapper")
         }
         if (quizData.id == maxQuestions){
-            $("<span id='inline-msg'>Final Score: " + score + "/7 </span> <br>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg'>Final Score: " + score + " </span> <br>").insertAfter("#question-wrapper")
         }
         // disable buttons after answer chosen
         $('.multChoice').each(function(i, obj) {
