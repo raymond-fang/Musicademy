@@ -19,8 +19,8 @@ function loadButtons(){
     numPrev = parseInt(quizData.id) - 1;
 
 
-    prevQuest= $('<a href="/quiz/' + numPrev + '" class="btn-link">  < Prev. Question </a>');
-    nextQuest= $('<a href="/quiz/' + numNext + '" class="btn-link">  Next Question > </a>');
+    prevQuest= $('<a href="/quiz/' + numPrev + '" class="btn-link"><button class="btn quizz-btns">  < Prev. Question </button></a>');
+    nextQuest= $('<a href="/quiz/' + numNext + '" class="btn-link"><button class="btn quizz-btns"> Next Question > </button></a>');
     if (numPrev <= 0){
         prevQuest.addClass("disabled");
         prevQuest.prop("disabled",true);

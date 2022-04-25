@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="container">
+<div class="container quizz-box">
     <script>
         let quizData= {{quizData|tojson}}
         let score = {{score}}
     </script>
     <script src="../static/quiz.js"></script> 
+
 
 
     <div id="question-wrapper" class="h2">
@@ -16,7 +17,7 @@
     <div id="choices-wrapper">
 
     </div>
-    <div class="d-flex justify-content-between" id="buttons-wrapper"> 
+        <div class="d-flex justify-content-between prev-btns" id="buttons-wrapper">
     </div>
 </div>
 {% endblock %}
