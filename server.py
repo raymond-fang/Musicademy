@@ -147,7 +147,7 @@ quizData = {
         "question": " Listen to this Song. What genre is it?",
         "choices": ["House", "Dubstep", "Electronic Rock", "Lofi"], 
         "answer": "2",
-        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6O5GkApphr8bRlbA8oehvj?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1wKy1UGBNH8B7lTfxX4wm0?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
       },
     
     "8" : {

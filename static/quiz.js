@@ -19,17 +19,15 @@ function loadButtons(){
     numPrev = parseInt(quizData.id) - 1;
 
 
-    prevQuest= $('<a href="/quiz/' + numPrev + '" class="btn-link">  < Prev. Question </a>');
-    nextQuest= $('<a href="/quiz/' + numNext + '" class="btn-link">  Next Question > </a>');
+    //prevQuest= $('<a href="/quiz/' + numPrev + '" class="btn-link">  < Prev. Question </a>');
+    nextQuest= $('<a href="/quiz/' + numNext + '" class="btn-link" id="nextButton">  Next Question > </a>');
     if (numPrev <= 0){
-        prevQuest.addClass("disabled");
-        prevQuest.prop("disabled",true);
+        //prevQuest.addClass("disabled");
+        //prevQuest.prop("disabled",true);
     }
-    if (numNext > maxQuestions) {
-        nextQuest.addClass("disabled");
-        nextQuest.prop("disabled",true);
-    }
-    $("#buttons-wrapper").append(prevQuest);
+    nextQuest.addClass("disabled");
+    nextQuest.prop("disabled",true);
+    //$("#buttons-wrapper").append(prevQuest);
     $("#buttons-wrapper").append(nextQuest);
 }
 
@@ -81,9 +79,7 @@ $(document).ready(function(){
         $('.multChoice').each(function(i, obj) {
             $(this).prop("disabled",true);
         });
-      
-    
-        
+        $('#nextButton').removeClass('disabled');
     });
 
   
