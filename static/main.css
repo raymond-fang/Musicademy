@@ -167,6 +167,19 @@ body {
     border-radius: 10px;
 }
 
+.result-link{
+    color: #5B9BD5 !important;
+
+}
+
+.res-item {
+    background-color: white;
+    border-radius: 20px;
+    border:1px solid gray;
+    text-align: left;
+    padding-inline: 20px;
+}
+
 .quizz-btns:hover {
     background-color: #5B9BD5;
     border-color: black;}

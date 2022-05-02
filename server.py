@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 
 score = 0
+wrongQuestions = {}
 
 # ROUTES
 @app.route('/')
@@ -14,7 +15,14 @@ def start_page():
 
 @app.route('/quiz/<page>')
 def load_quiz(page=None):
-    return render_template('quiz.html', quizData= quizData[page], score=score) 
+    if page == "results":
+        print("results")
+        resultData = {"id" : "result", "results": wrongQuestions}
+        return render_template('quiz_results.html', quizData=resultData, score=score)
+
+    elif int(page)  <= 10: 
+        return render_template('quiz.html', quizData= quizData[page], score=score) 
+        
 
 @app.route('/learn/<page>')
 def learn(page=None):
@@ -26,11 +34,37 @@ def add():
     data = request.get_json()
     print(data)
     score += data["result"]
+    if data["result"]== 0:
+        q= data["id"]
+        answer = int(quizData[q]["answer"])
+        choice= int(data["choice"])
+        topic = learnData[quizSubjects[q]]["topic"]
+        qResult ={
+            "id": q,
+            "question":quizData[q]["question"],
+            "answer": quizData[q]["choices"][answer], 
+            "learn": quizSubjects[q],
+            "topic": topic,
+            "choice": quizData[q]["choices"][choice]
+        }
+        print(qResult)
+        wrongQuestions[q] = qResult
     print(score)
     return jsonify(url="quiz/1")
 
 
-
+quizSubjects = {
+    "1" : "3",      #ElectroSwing 
+    "2" : "2",      #Dubstep
+    "3": "5",       #Lofi
+    "4": "6",       #House
+    "5":"7",        #Industrial
+    "6": "7",       #"Industrial
+    "7":"4",        #Electronic Rock
+    "8": "3",       #ElectroSwing 
+    "9": "6",       #House
+    "10": "8",      #Trance
+}
 
 # AJAX FUNCTIONS
 

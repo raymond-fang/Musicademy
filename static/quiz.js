@@ -13,40 +13,62 @@ function loadChoices() {
     }
 }
 
+function loadResults() {
+    results = quizData.results
+    for (const n in results){
+        let result = $('<div class="res-item my-4"> <div>');
+    
+        let question = $('<div class="result-question h5 mt-2 mb-0" > <strong> Question ' + results[n].id + ':</strong> '  + results[n].question + ' </div>');
+        let answer = $('<hr/><div class="result-answer px-2" >  Your answer: <span class="text-danger">' + results[n].choice +'</span> <br> <span class="font-weight-bold"> Correct Answer: </span> <span class="text-success" ">'+ results[n].answer +   '</span>   </div>');
+        let learn = $('<div class="result-learn px-4 py-2"> <a href="/learn/' + results[n].learn + '" class="link-primary result-link" > Click here to learn more about ' + results[n].topic + '>   </a> ')
+        result.append(question);
+        result.append(answer);
+        result.append(learn);
+        $("#results-wrapper").append(result);
+    }
+}
+
 // load the next question/ prev question  buttons
 function loadButtons(){
     numNext = parseInt(quizData.id) +1;
-    numPrev = parseInt(quizData.id) - 1;
+    if (numNext == 11) {
+        nextQuest= $('<a href="/quiz/results" id="next-button" class="btn-link pull-right"><button class="btn quizz-btns"> Results > </button></a>');
 
 
-    prevQuest= $('<a href="/quiz/' + numPrev + '" class="btn-link"><button class="btn quizz-btns">  < Prev. Question </button></a>');
-    nextQuest= $('<a href="/quiz/' + numNext + '" class="btn-link"><button class="btn quizz-btns"> Next Question > </button></a>');
-    if (numPrev <= 0){
-        prevQuest.addClass("disabled");
-        prevQuest.prop("disabled",true);
+    } else {
+        nextQuest= $('<a href="/quiz/' + numNext + '" id="next-button" class="btn-link pull-right"><button class="btn quizz-btns"> Next Question > </button></a>');
     }
-    if (numNext > maxQuestions) {
-        nextQuest.addClass("disabled");
-        nextQuest.prop("disabled",true);
-    }
-    $("#buttons-wrapper").append(prevQuest);
+    nextQuest.addClass("disabled");
+    nextQuest.prop("disabled",true);
     $("#buttons-wrapper").append(nextQuest);
 }
 
 
 
 $(document).ready(function(){
-    loadChoices();
-    loadButtons();
+    console.log(quizData)
+
+    if(quizData.id == "result"){
+        console.log("results")
+        loadResults()
+
+    } else {
+        loadChoices();
+        loadButtons();
+    }
+
     // handle user clicking on choice
     $('#choices-wrapper').on('click', '.multChoice', function(){    
         let choice = $(this).data("numchoice")
         $("#inline-msg").remove();
+        nextQuest.removeClass("disabled");
+        nextQuest.prop("disabled",false);
+
 
         if (choice == quizData.answer){
             // add success msg if correct
             $(this).addClass("bg-success");
-            var item = {"result" : 1};
+            var item = {"id": quizData.id, "result" : 1, "choice":choice};
             score++;
             $.ajax({
                 type: "POST",
@@ -62,7 +84,7 @@ $(document).ready(function(){
         } else {
             // add err msg if incorrect
             $(this).addClass("bg-danger")
-            var item = {"result" : 0};
+            var item = {"id": quizData.id, "result" : 0, "choice":choice};
             $.ajax({
                 type: "POST",
                 url: "/updateScore",
