@@ -19,26 +19,22 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id = "topnav" class="navbar navbar-expand-lg navbar-light bg-light topnav">
       <div class="container">
-        <div class="col-9">
-          <div class="row">
-            <div class="col-6">
-              <img src="https://apprecs.org/gp/images/app-icons/300/45/modern.audio.tools.musicequalizer.jpg" class="title-logo">
-              <a class="navbar-brand" style="padding-top: 20px; padding-left: 20px;" href="/"> Musicademy </a>
-            </div>
+        <div class="col-3" id="logo-nav">
+          <img src="https://apprecs.org/gp/images/app-icons/300/45/modern.audio.tools.musicequalizer.jpg" class="title-logo">
+          <a class="navbar-brand" style="padding-left: 20px;" href="/"> Musicademy </a>
+        </div>
             
-            <div class="col-6 header-links">
-              <a class="navbar-brand col-2" href="/">Home</a>
-              <a class="navbar-brand col-2" href="/learn/1">Learn</a>
-              <a class="navbar-brand col-2" href="/quiz/1">Quiz</a>
-            </div>
-          </div>
-        </div> 
+        <div class="col-6 header-links">
+            <a class="navbar-brand col-2 home-btn" href="/"><button class="btn options-btns">Home</button></a>
+            <a class="navbar-brand col-2 learn-btn" href="/learn/1"><button class="btn options-btns">Learn</button></a>
+            <a class="navbar-brand col-2 quizz-btn" href="/quiz/1"><button class="btn options-btns">Quiz</button></a>
+        </div>
         
-        <div class="col-3">
-          <input type="submit" value="Sign Up" class="btn title-btn">
-          <input type="submit" value="Login" class="btn title-btn">
+        <div class="col-3" id="login-btns">
+          <a class="navbar-brand" href="/"><button class="btn title-btn">Sign Up</button></a>
+          <a class="navbar-brand" href="/"><button class="btn title-btn">Login</button></a>
         </div>
       </div> 
       </div>
@@ -47,7 +43,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-1 background"></div>
-      <div class="col-10">
+      <div class="col-10 container-main">
         {% block content %}
         {% endblock %}
       </div> 
