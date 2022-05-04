@@ -20,7 +20,7 @@ function loadResults() {
     
         let question = $('<div class="result-question h5 mt-2 mb-0" > <strong> Question ' + results[n].id + ':</strong> '  + results[n].question + ' </div>');
         let answer = $('<hr/><div class="result-answer px-2" >  Your answer: <span class="text-danger">' + results[n].choice +'</span> <br> <span class="font-weight-bold"> Correct Answer: </span> <span class="text-success" ">'+ results[n].answer +   '</span>   </div>');
-        let learn = $('<div class="result-learn px-4 py-2"> <a href="/learn/' + results[n].learn + '" class="link-primary result-link" > Click here to learn more about ' + results[n].topic + '>   </a> ')
+        let learn = $('<div class="result-learn px-4 py-2"> <a href="/learn/' + results[n].learn + '" class="link-primary result-link" > Click here to review ' + results[n].topic + '  </a> ')
         result.append(question);
         result.append(answer);
         result.append(learn);
