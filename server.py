@@ -15,6 +15,9 @@ def start_page():
 
 @app.route('/quiz/<page>')
 def load_quiz(page=None):
+    if page == "1":
+        global score
+        score = 0
     if page == "results":
         print("results")
         resultData = {"id" : "result", "results": wrongQuestions}
@@ -27,6 +30,10 @@ def load_quiz(page=None):
 @app.route('/learn/<page>')
 def learn(page=None):
     return render_template('learn.html', data = learnData[page])
+
+@app.route('/genres')
+def genres(page=None):
+    return render_template('genres.html')
 
 @app.route('/updateScore', methods=['POST'])
 def add():
@@ -98,8 +105,8 @@ learnData = {
         "topic": "Electronic Rock",
         "summary": "Electronic rock is a music genre that involves a combination of rock music and electronic music, featuring instruments typically found within both genres. It originates from the late 1960s, when rock bands began incorporating electronic instrumentation into their music. Electronic rock acts usually fuse elements from other music styles, including punk rock, industrial rock, hip hop, techno, and synth-pop, which has helped spur subgenres such as indietronica, dance-punk, and electroclash. Being a fusion of rock and electronic, electronic rock features instruments found in both genres, such as synthesizers, mellotrons, tape music techniques, electric guitars, and drums. Some electronic rock artists, however, often eschew guitar in favor of using technology to emulate a rock sound. Vocals are typically mellow or upbeat, but instrumentals are also common in the genre.",
         "name": "",
-        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6O5GkApphr8bRlbA8oehvj?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-        "embedAudio2" : '<iframe class="right-align" style="border-radius:12px" src="https://open.spotify.com/embed/track/6zuHPNE8MyG1wiRlbuTKNf?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7LmyUD78mtwBDzgVV4P5F4?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+        "embedAudio2" : '<iframe class="right-align" style="border-radius:12px" src="https://open.spotify.com/embed/track/1g7j5AxiNKTGjryhFIlAsA?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
     },
     "5" : {
         "id":  "5",
@@ -173,7 +180,7 @@ quizData = {
         "question": " Listen to this Song. What genre is it?",
         "choices": [ "Dubstep", "House", "Industrial", "Lofi"], 
         "answer": "2",
-        "embedAudio" : '<iframe class="right-align" style="border-radius:12px" src="https://open.spotify.com/embed/track/1nZMBGnMGqEsiiw7EVQdjS?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1nZMBGnMGqEsiiw7EVQdjS?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
     },
 
     "7" : {
@@ -189,7 +196,7 @@ quizData = {
         "question": "True or False: This Song is an example of Electro Swing",
         "choices": ["True", "False"],
         "answer": "0",
-        "embedAudio" : '<iframe class="right-align" style="border-radius:12px" src="https://open.spotify.com/embed/track/04KsMCb9PZE2S0AtUU8Jhb?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
+        "embedAudio" : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/04KsMCb9PZE2S0AtUU8Jhb?utm_source=generator" width="47%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'
       },
 
     "9" : {

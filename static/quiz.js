@@ -20,7 +20,7 @@ function loadResults() {
     
         let question = $('<div class="result-question h5 mt-2 mb-0" > <strong> Question ' + results[n].id + ':</strong> '  + results[n].question + ' </div>');
         let answer = $('<hr/><div class="result-answer px-2" >  Your answer: <span class="text-danger">' + results[n].choice +'</span> <br> <span class="font-weight-bold"> Correct Answer: </span> <span class="text-success" ">'+ results[n].answer +   '</span>   </div>');
-        let learn = $('<div class="result-learn px-4 py-2"> <a href="/learn/' + results[n].learn + '" class="link-primary result-link" > Click here to learn more about ' + results[n].topic + '>   </a> ')
+        let learn = $('<div class="result-learn px-4 py-2"> <a href="/learn/' + results[n].learn + '" class="link-primary result-link" > Click here to review ' + results[n].topic + '  </a> ')
         result.append(question);
         result.append(answer);
         result.append(learn);
@@ -79,7 +79,7 @@ $(document).ready(function(){
                 success: function (response) {
                 }
             });
-            $("<span id='inline-msg' class='text-success'>Correct Answer! </span>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='text-success correct'>Correct Answer! </span>").insertAfter("#question-wrapper")
         
         } else {
             // add err msg if incorrect
@@ -94,10 +94,10 @@ $(document).ready(function(){
                 success: function (response) {
                 }
             });
-            $("<span id='inline-msg' class='text-danger'>Incorrect Answer </span>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='text-danger' incorrect>Incorrect Answer </span>").insertAfter("#question-wrapper")
         }
         if (quizData.id == maxQuestions){
-            $("<span id='inline-msg'>Final Score: " + score + " </span> <br>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='correct'>Final Score: " + score + " </span> <br> <br>").insertAfter("#question-wrapper")
         }
         // disable buttons after answer chosen
         $('.multChoice').each(function(i, obj) {
