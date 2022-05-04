@@ -15,6 +15,9 @@ def start_page():
 
 @app.route('/quiz/<page>')
 def load_quiz(page=None):
+    if page == "1":
+        global score
+        score = 0
     if page == "results":
         print("results")
         resultData = {"id" : "result", "results": wrongQuestions}
