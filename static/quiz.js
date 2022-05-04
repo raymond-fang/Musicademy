@@ -2,10 +2,29 @@
 var maxQuestions= 10;
 
 function loadChoices() {
-    $("#question-wrapper").append($('<p> ' + quizData.id + ") " + quizData.question + '</p>'));
-    for(let i=0; i< quizData.choices.length; i++) {
-        let choice = $('<button type="button" data-numchoice="' + i + '" class="btn btn-outline-secondary row d-block multChoice">' + quizData.choices[i] + '</button>');
-        $("#choices-wrapper").append(choice);
+    if(quizData.id <= 5) {
+        $("#question-wrapper").append($('<br><p> ' + quizData.id + ") " + quizData.question + '</p> <br>'));
+    }
+    else {
+        $("#question-wrapper").append($('<p> ' + quizData.id + ") " + quizData.question + '</p>'));
+    }
+    
+    for(let i=0; i < quizData.choices.length; i++) {
+        if(quizData.id > 5 && quizData.choices.length > 2) {
+            let choice = $('<button type="button" data-numchoice="' + i + '" class="btn btn-outline-secondary column multChoice">' + quizData.choices[i] + '</button>');
+            $("#choices-wrapper").append(choice);
+            if(i == 1) {
+                $("#choices-wrapper").append("<br>");
+            }
+        }
+        else {
+            let choice = $('<button type="button" data-numchoice="' + i + '" class="btn btn-outline-secondary row d-block multChoice">' + quizData.choices[i] + '</button>');
+            $("#choices-wrapper").append(choice);
+            if(i == 3) {
+                $("#choices-wrapper").append("<br><br>");
+            }
+        }
+
     }
     if(quizData.id > 5) {
         let embedAudio = $(quizData.embedAudio);

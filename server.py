@@ -18,6 +18,8 @@ def load_quiz(page=None):
     if page == "1":
         global score
         score = 0
+        global wrongQuestions
+        wrongQuestions = {}
     if page == "results":
         print("results")
         resultData = {"id" : "result", "results": wrongQuestions}
@@ -153,7 +155,7 @@ quizData = {
 
     "2" : {
         "id":  "2", 
-        "question": " What music style is generally characterized by sparse, syncopated rhythmic patterns with prominent sub-bass frequencies.",
+        "question": " What music style is generally characterized by sparse, syncopated rhythmic patterns with prominent sub-bass frequencies?",
         "choices": ["House", "Dubstep", "Electronic Rock", "Lofi"], 
         "answer": "1"
     },
@@ -171,7 +173,7 @@ quizData = {
     },
     "5" : {
         "id":  "5", 
-        "question": "What Genre spawned the dark electro genre, pioneered by ​​ Skinny Puppy, Front Line Assembly, Numb, and others.",
+        "question": "What Genre spawned the dark electro genre, pioneered by ​​ Skinny Puppy, Front Line Assembly, Numb, and others?",
         "choices": [ "Dubstep", "House", "Industrial", "Lofi"], 
         "answer": "2"
     },
