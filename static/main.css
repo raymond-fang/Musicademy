@@ -157,6 +157,7 @@ body {
     bottom: 0;
     position: absolute;
     overflow: auto;
+    background-color: rgb(255, 255, 255);
 }
 
 .container-main {
@@ -203,7 +204,6 @@ body {
 
 .result-link{
     color: #5B9BD5 !important;
-
 }
 
 .res-item {
@@ -234,6 +234,27 @@ body {
     color: darkgrey;
 }
 
+.hr-title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    background-color:#5B9BD5;
+    height: 2px;
+}
+
+.learn-text-group {
+    border-radius: 25px;
+    border:1px solid rgb(255, 255, 255);
+    background-color: #8cbce9;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: #5B9BD5;
+    margin-top: 30px;
+}
 .boxes-list {
     width: 100%;
     display: flex;
