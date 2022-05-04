@@ -79,7 +79,7 @@ $(document).ready(function(){
                 success: function (response) {
                 }
             });
-            $("<span id='inline-msg' class='text-success'>Correct Answer! </span>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='text-success correct'>Correct Answer! </span>").insertAfter("#question-wrapper")
         
         } else {
             // add err msg if incorrect
@@ -94,10 +94,10 @@ $(document).ready(function(){
                 success: function (response) {
                 }
             });
-            $("<span id='inline-msg' class='text-danger'>Incorrect Answer </span>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='text-danger' incorrect>Incorrect Answer </span>").insertAfter("#question-wrapper")
         }
         if (quizData.id == maxQuestions){
-            $("<span id='inline-msg'>Final Score: " + score + " </span> <br>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='correct'>Final Score: " + score + " </span> <br> <br>").insertAfter("#question-wrapper")
         }
         // disable buttons after answer chosen
         $('.multChoice').each(function(i, obj) {

@@ -168,8 +168,9 @@ body {
     background-color: rgba(224,234,245,0.79);
     color: black;
     border-color: #5B9BD5;
-    width: 200px;
+    width: 250px;
     margin-top: 5px;
+    font-size: 25px;
 }
 
 .multChoice:hover {
@@ -189,7 +190,7 @@ body {
     text-align: -webkit-center;
     margin: auto;
     width:70%;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 20px;
 }
 
@@ -288,4 +289,12 @@ body {
   
   .white {
     color: white;
+  }
+
+  .correct{
+    font-size: 25px;
+  }
+
+  .incorrect{
+    font-size: 25px;
   }
