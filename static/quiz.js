@@ -98,7 +98,7 @@ $(document).ready(function(){
                 success: function (response) {
                 }
             });
-            $("<span id='inline-msg' class='text-success correct'>Correct Answer! </span>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='text-success correct centered'>Correct! </span>").insertAfter("#question-wrapper")
         
         } else {
             // add err msg if incorrect
@@ -113,7 +113,7 @@ $(document).ready(function(){
                 success: function (response) {
                 }
             });
-            $("<span id='inline-msg' class='text-danger' incorrect>Incorrect Answer </span>").insertAfter("#question-wrapper")
+            $("<span id='inline-msg' class='text-danger incorrect centered' >Incorrect </span>").insertAfter("#question-wrapper")
         }
         if (quizData.id == maxQuestions){
             $("<span id='inline-msg' class='correct'>Final Score: " + score + " </span> <br> <br>").insertAfter("#question-wrapper")

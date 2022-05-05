@@ -132,7 +132,7 @@ body {
     background-color: #5B9BD5;;
 }
 .background {
-    background-color: #5B9BD5;
+    background-color: white;
     overflow: auto;
 }
 .navbar-brand {
@@ -162,6 +162,7 @@ body {
 
 .container-main {
     margin-bottom: 20px;
+    background-color: #d2e8ff;
 }
 
 .multChoice{
@@ -224,7 +225,7 @@ body {
 }
 
 .result-link{
-    color: #5B9BD5 !important;
+    color: darkgrey !important;
 }
 
 .res-item {
@@ -335,9 +336,14 @@ body {
   }
 
   .correct{
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .incorrect{
-    font-size: 25px;
+    font-size: 30px;
+  }
+
+  .centered{
+      text-align: center;
+      margin-right: 35px;
   }
